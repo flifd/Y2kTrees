@@ -10,19 +10,6 @@
   <input type="text" id="m" placeholder="Type message..." />
   <button onclick="send()">Send</button>
 
-  <script>
-    const c = document.getElementById("c");
-    const m = document.getElementById("m");
-    const ws = new WebSocket("ws://localhost:6789");
-
-    ws.onmessage = e => c.value += e.data + "\n";
-
-    function send() {
-      const txt = m.value;
-      ws.send(txt);
-      c.value += "<You>: " + txt + "\n";
-      m.value = "";
-    }
-  </script>
+  <script src="./js/newUser.js"></script>
 </body>
 </html>
